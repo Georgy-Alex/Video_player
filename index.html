@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Video player</title>
+</head>
+
+<body>
+    <header>
+        <div class="greeting">
+            <h1>Добрo пожаловать</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <video poster="vid/preview.png" class="vid" id="video"></video>
+                <div>
+                    <progress id="slider" class="slider" max="100" value="0"></progress>
+                </div>
+                <div id="buffered" class="buffered">
+                    <span id="buffered-amount"></span>
+                </div>
+                <div class="sensors">
+                    <button class="play">Play</button>
+                    <button class="back"><<</button>
+                    <button class="forth">>></button>
+                    <select id="speed">
+                        <option value="1">обычная</option>
+                        <option value="2">2</option>
+                        <option value="1.5">1.5</option>
+                        <option value="0.5">0.5</option>
+                        <option value="0.25">0.25</option>
+                    </select>
+                    <input id="sound" type="range" min="0" max="100">
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
